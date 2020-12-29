@@ -1,9 +1,65 @@
 :root {
   --background: #823dcc;
+  --primery: #fff;
+  --secondary: #f15a22;
 }
 * {
   margin: 0;
   padding: 0;
   border: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
   background-color: var(--background);
+}
+.container {
+  padding: 2% 5%;
+}
+
+nav {
+  margin-bottom: 2%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main {
+  border-radius: 5px;
+  padding: 5% 5%;
+  background-color: var(--primery);
+}
+
+.intro {
+  height: 70vh;
+  margin: 2% 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--primery);
+}
+
+.col p {
+  font-weight: 100;
+  font-size: 16px;
+}
+.col h1 {
+  font-weight: 800;
+  font-size: 46px;
+}
+
+.col span {
+  color: var(--secondary);
+}
+.logo {
+  color: var(--primery);
+}
+
+.sectionOne {
+}
+.experience {
+  display: flex;
+}
+
+.expInner {
+  display: flex;
 }
