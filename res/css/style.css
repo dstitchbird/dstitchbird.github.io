@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
 /* Basic css */
 :root {
   --background: #823dcc;
@@ -9,7 +11,7 @@
   margin: 0;
   padding: 0;
   border: none;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "poppins", sans-serif;
   list-style: none;
 }
 
@@ -21,10 +23,11 @@ body {
 .container {
   padding: 2% 5%;
 }
-nav {
+.nav {
   margin-bottom: 2%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .intro {
@@ -37,19 +40,35 @@ nav {
 }
 
 .col p {
+  font-family: 'Open Sans', sans-serif;
   font-weight: 100;
   font-size: 16px;
 }
 .col h1 {
-  font-weight: 800;
+  font-weight: 900;
   font-size: 46px;
 }
-
+.col h2{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  
+}
 .col span {
   color: var(--secondary);
 }
-.logo {
+.logo a {
   color: var(--primery);
+  text-decoration: none;
+  font-size: 2em;
+  font-family: 'Poppins', sans-serif;
+}
+.logo span{
+  font-family: 'monoton', sans-serif;
+}
+.menu img{
+    width: 1.5vw;
+    height: auto;
 }
 
 /* Main Content css */
@@ -59,19 +78,24 @@ nav {
   background-color: var(--primery);
 }
 .sectionOne {
-  margin: 1% 0%;
+  margin: 0% 0% 8% 0%;
 }
+
 .experience {
   display: flex;
 }
 .experience h2 {
+  font-weight: 800;
   font-size: 4em;
   background: linear-gradient(90deg, red, purple);
   background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .experience p {
   align-self: center;
+  font-size: 16px;
+  line-height: 14pt;
 }
 
 .expInner {
@@ -81,16 +105,20 @@ nav {
 .expText,
 .expList {
   flex: 5;
-  padding: 2% 0%;
 }
 
 .expText h2 {
-  font-size: 3em;
+  color: #303e47;
+  font-size: 46px;
+  font-weight: bold;
+  line-height: 1em;
+  margin-bottom: 10px;
 }
 .expText p {
   padding-right: 20%;
   font-weight: 100;
   line-height: 1.5em;
+  margin-bottom: 10px;
 }
 
 .expList {
@@ -100,6 +128,7 @@ nav {
 
 .expList h3 {
   font-size: 2em;
+  font-weight: 800;
 }
 
 .list li {
@@ -109,13 +138,13 @@ nav {
 }
 
 .services h3 {
-  color: purple;
+  color: #823dcc;
 }
 .work h3 {
-  color: yellow;
+  color: #fcc400;
 }
 .agency h3 {
-  color: red;
+  color: #f76840;
 }
 
 .button {
@@ -134,4 +163,73 @@ nav {
 
 .button a:hover {
   background-color: gray;
+}
+
+/* section two  */
+
+.sectionTwo h2{
+  font-size: 50px;
+  font-weight: 900;
+}
+
+.inner{
+  display: flex;
+  justify-content: space-between;
+}
+.side{
+  flex: 2 2 30%;
+}
+
+.first{
+  padding: 0% 8%;
+  margin:  0% 0% 15% 0%;
+}
+.first a{
+  font-size: 24px;
+  font-weight: 400;
+  color: gray;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+.first li{
+  color: gray;
+  list-style: decimal-leading-zero;
+}
+.first li::marker{
+  font-size: 12px;
+}
+.first a:before{
+  content: "/ ";
+  font-size: 12px;
+}
+.first a:checked{
+  color: var(--background);
+}
+.second h3{
+  font-size: 24px;
+}
+.second div{
+  padding: 0% 50% 0% 2%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.second span{
+  flex: 1 1 auto;
+  text-align: center;
+  margin: 5px;
+}
+
+.second a{
+  text-decoration: none;
+  background-color: #fff;
+  padding: 1px 10px;
+  border: rgba(0, 0, 0, 0.2) solid 1px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.4);
+  text-transform: capitalize;
+}
+
+.works{
+  flex: 2 2 70%;
 }
