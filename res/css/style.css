@@ -1,32 +1,30 @@
+/* Basic css */
 :root {
   --background: #823dcc;
   --primery: #fff;
   --secondary: #f15a22;
+  --tertiary: gray;
 }
 * {
   margin: 0;
   padding: 0;
   border: none;
   font-family: Arial, Helvetica, sans-serif;
+  list-style: none;
 }
 
 body {
   background-color: var(--background);
 }
+
+/*  ///////  */
 .container {
   padding: 2% 5%;
 }
-
 nav {
   margin-bottom: 2%;
   display: flex;
   justify-content: space-between;
-}
-
-.main {
-  border-radius: 5px;
-  padding: 5% 5%;
-  background-color: var(--primery);
 }
 
 .intro {
@@ -54,12 +52,86 @@ nav {
   color: var(--primery);
 }
 
+/* Main Content css */
+.main {
+  border-radius: 5px;
+  padding: 5% 5%;
+  background-color: var(--primery);
+}
 .sectionOne {
+  margin: 1% 0%;
 }
 .experience {
   display: flex;
 }
+.experience h2 {
+  font-size: 4em;
+  background: linear-gradient(90deg, red, purple);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.experience p {
+  align-self: center;
+}
 
 .expInner {
   display: flex;
+}
+
+.expText,
+.expList {
+  flex: 5;
+  padding: 2% 0%;
+}
+
+.expText h2 {
+  font-size: 3em;
+}
+.expText p {
+  padding-right: 20%;
+  font-weight: 100;
+  line-height: 1.5em;
+}
+
+.expList {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.expList h3 {
+  font-size: 2em;
+}
+
+.list li {
+  color: var(--tertiary);
+  padding: 5px 0%;
+  font-weight: 100;
+}
+
+.services h3 {
+  color: purple;
+}
+.work h3 {
+  color: yellow;
+}
+.agency h3 {
+  color: red;
+}
+
+.button {
+  display: flex;
+}
+.button a {
+  font-size: 12px;
+  background-color: black;
+  padding: 1% 2%;
+  color: #fff;
+  text-decoration: none;
+  text-transform: capitalize;
+  border-radius: 50px;
+  transition: 0.2s ease-in-out;
+}
+
+.button a:hover {
+  background-color: gray;
 }
