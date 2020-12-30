@@ -14,12 +14,16 @@
   border: none;
   font-family: "poppins", sans-serif;
   list-style: none;
+  scroll-behavior: smooth;
   transition: 0.2s ease-in-out;
+  box-sizing: border-box;
 }
 
 body {
+ 
   color: #303e47;
   background-color: var(--background);
+  box-sizing: border-box;
 }
 a {
   text-decoration: none;
@@ -27,7 +31,9 @@ a {
 
 /*  ///////  */
 .container {
+  
   padding: 2% 5%;
+  overflow: hidden;
 }
 .nav {
   margin-bottom: 2%;
@@ -105,6 +111,7 @@ a {
 
 .expInner {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .expText,
@@ -668,4 +675,72 @@ a {
 .copywrite{
   opacity: 50%;
   text-align: end;
+}
+
+/*media query*/
+
+@media(max-width:850px ){
+  body{
+    background-color: green;
+  }
+}
+
+@media(max-width:450px ){
+  .h2{font-size: 34px;}
+  .nav .menu img{
+    width: 6vw;
+  }
+  .intro{margin: 1% 0%;}
+  .intro .col:nth-of-type(2){
+    display: none;
+  }
+  .intro .col h1 {
+    font-size: 34px;
+  }
+  .intro .col h2{
+    font-size: 16px;
+    font-weight: 100;
+  }
+
+  .main{
+    padding: 2% 8%;
+  }
+  .experience h2{
+    margin-bottom: 2%;
+  }
+  .expInner{
+    display: block;
+  }
+  .expText{margin-bottom: 10%;}
+  .expText h2{
+      font-size:22px ;
+      line-height: 22pt;
+  }
+  .expText p{
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0;
+  }
+  .expList{
+    display: block;
+  }
+  .expList div {
+    margin-bottom: 5%;
+  }
+  .expList h3{
+    font-size: 44px;
+    margin-bottom: -2%;
+  }
+  .expList .list li{
+    display: inline-block;
+    padding: 0;
+  }
+  .sectionOne .button{
+    display: block;
+    margin-top: 20%;
+    text-align: center;
+  }
+  .sectionOne .button a{
+    padding: 4% 10%;
+  }
 }
