@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700;900&display=swap");
 
 /* Basic css */
 :root {
@@ -17,6 +18,9 @@
 
 body {
   background-color: var(--background);
+}
+a {
+  text-decoration: none;
 }
 
 /*  ///////  */
@@ -40,7 +44,7 @@ body {
 }
 
 .col p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 100;
   font-size: 16px;
 }
@@ -48,11 +52,10 @@ body {
   font-weight: 900;
   font-size: 46px;
 }
-.col h2{
-  font-family: 'Open Sans', sans-serif;
+.col h2 {
+  font-family: "Open Sans", sans-serif;
   font-size: 1em;
   font-weight: 400;
-  
 }
 .col span {
   color: var(--secondary);
@@ -61,14 +64,14 @@ body {
   color: var(--primery);
   text-decoration: none;
   font-size: 2em;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-.logo span{
-  font-family: 'monoton', sans-serif;
+.logo span {
+  font-family: "monoton", sans-serif;
 }
-.menu img{
-    width: 1.5vw;
-    height: auto;
+.menu img {
+  width: 1.5vw;
+  height: auto;
 }
 
 /* Main Content css */
@@ -140,7 +143,7 @@ body {
 .services h3 {
   color: #823dcc;
 }
-.work h3 {
+.expInner .work h3 {
   color: #fcc400;
 }
 .agency h3 {
@@ -166,63 +169,65 @@ body {
 }
 
 /* section two  */
-.sectionTwo{
+.sectionTwo {
   margin: 10% 0%;
 }
-.sectionTwo h2{
+.sectionTwo h2 {
+  margin-bottom: 2%;
   font-size: 50px;
   font-weight: 900;
 }
 
-.inner{
+.inner {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
-.side{
+.side {
   flex: 2 2 30%;
 }
 
-.first{
+.first {
   padding: 0% 8%;
-  margin:  0% 0% 15% 0%;
+  margin: 0% 0% 15% 0%;
 }
-.first a{
+.first a {
   font-size: 24px;
   font-weight: 400;
   color: gray;
   text-transform: capitalize;
   text-decoration: none;
 }
-.first li{
+.first li {
   color: gray;
   list-style: decimal-leading-zero;
 }
-.first li::marker{
+.first li::marker {
   font-size: 12px;
 }
-.first a:before{
+.first a:before {
   content: "/ ";
   font-size: 12px;
 }
-.first a:checked{
+.first a:checked {
   color: var(--background);
 }
-.second h3{
+.second h3 {
   font-size: 24px;
 }
-.second div{
+.second div {
   padding: 0% 50% 0% 2%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
 }
-.second span{
+.second span {
   flex: 1 1 auto;
   text-align: center;
   margin: 5px;
 }
 
-.second a{
+.second a {
   text-decoration: none;
   background-color: #fff;
   padding: 1px 10px;
@@ -232,67 +237,260 @@ body {
   text-transform: capitalize;
 }
 
-.works{
-  height: 00px;
-  flex: 2 2 70%;
-  border: solid red 1px;
-}
-#workGroup{
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto auto;
-  grid-gap: 2vh;
-}
-.works div{
+.works {
+  width: auto;
   height: auto;
+  flex: 1 1 70%;
+}
+#workGroup {
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-gap: 10px;
+}
+.works .work {
+  height: 30vh;
   width: 100%;
+  border-radius: 1%;
   background-color: #823dcc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+}
+.works div:nth-child(2) {
+  background-image: url(/res/img/workgridbg1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.works div:nth-child(2):hover {
+  color: #fff;
+  filter: saturate(0%);
+  transition: 0.5s ease;
+}
+.works .work:hover {
+  animation: workHover 1s;
+  animation-fill-mode: both;
 }
 
+@keyframes workHover {
+  100% {
+    background-color: gray;
+  }
+}
 
-/* section two  */
-.sectionThree{
+/* section Three  */
+.sectionThree {
   background-color: #1f2845;
   border-radius: 5px;
   height: 50vh;
+  margin: 10% 0%;
 }
-.awards{
+.awards {
   box-sizing: border-box;
   height: 100%;
   display: flex;
   padding: 5%;
 }
-.awardDisp{
+.awardDisp {
+  flex: 1 1 50%;
   position: relative;
   height: 100%;
   width: 100%;
   background-color: #823dcc;
+  overflow: hidden;
 }
-.awardDisp img{
+.tab {
+  overflow: hidden;
+}
+.tab button {
+  color: #fff;
+  background-color: inherit;
+  cursor: pointer;
+  float: left;
+  margin-right: 8%;
+  transition: 0.3s;
+  font-weight: 800;
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+}
+.tab button::after {
+  content: "";
+  border: 1px solid #fff;
+  width: 100%;
+  padding-right: 20%;
+  background-color: #dadada;
+}
+.tab button:hover {
+  opacity: 50%;
+}
+.tab button.active {
+  color: #823dcc;
+}
+.tabcontent {
+  display: none;
+  padding: 5% 0%;
+}
+.awardDisp img {
   width: 100%;
   height: auto;
   background-size: cover;
   background-color: #fcc400;
 }
-.awardDisp span{
+.awardDisp span {
+  color: #fff;
+  background-color: #823dcc;
+  height: 20%;
   width: 100%;
   display: flex;
+  justify-content: space-around;
+  align-items: center;
   position: absolute;
   bottom: 0px;
 }
-
-.awardText{
+.awardDisp span p {
+  position: absolute;
+  left: 10%;
+  font-size: 12px;
+  text-align: center;
+}
+.awardDisp span h3 {
+  font-size: 16px;
+  font-weight: 100;
+}
+.awardDiv {
+  flex: 1 1 50%;
   color: #fff;
   padding: 1% 5%;
 }
-.awardText ul{
+.awardDiv h2 {
+  text-transform: capitalize;
+  font-size: 2em;
+  font-weight: 900;
+}
+.awardDiv ul {
   display: flex;
   justify-content: space-evenly;
   padding-right: 50%;
 }
-.awardText p{
-  font-family: 'Open Sans' ,sans-serif;
+.awardDiv p {
+  font-family: "Open Sans", sans-serif;
   font-size: 14px;
   font-weight: 100;
-  color:#dadada
+  color: #dadada;
+}
+
+/* section Four*/
+.sectionFour {
+  overflow: hidden;
+  width: 100%;
+  margin: 5% 0%;
+}
+.sectionFour h2 {
+  text-align: center;
+  font-size: 3em;
+  font-weight: 600;
+  color: #303e47;
+  margin-bottom: 2%;
+}
+.blog {
+  padding: 2% 5%;
+  margin: auto;
+}
+.blogOne,
+.blogTwo {
+  margin-bottom: 5%;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.blog .blogImg {
+  flex: 1 1 50%;
+}
+.blog .blogInfo {
+  flex: 1 1 50%;
+}
+.blog .blogInfo {
+  padding-left: 2%;
+}
+.blogInfo span {
+  font-size: 16px;
+  color: #303e47;
+  opacity: 50%;
+  font-weight: 400;
+}
+.blogInfo .head {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2%;
+}
+.blogInfo .head img {
+  flex: 1 1 20%;
+  width: auto;
+  height: auto;
+  border: #303e47 2px solid;
+}
+.blogInfo .head h3 {
+  padding: 0% 0% 0% 1%;
+  flex: 1 1 80%;
+  font-size: 24px;
+  font-weight: 800;
+  color: #303e47;
+}
+.blogInfo p {
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 50%;
+  margin-bottom: 2%;
+  line-height: 22pt;
+}
+.blogInfo button {
+  width: 25%;
+  padding: 1%;
+  border-radius: 50px;
+}
+.blogInfo button a {
+  color: #303e47;
+}
+
+.blogTwo {
+  text-align: end;
+  flex-direction: row-reverse;
+  align-content: flex-end;
+}
+.blogTwo .blogInfo .head {
+  flex-direction: row-reverse;
+}
+.blogTwo .blogInfo {
+  padding: 0% 2% 0% 0%;
+  align-items: flex-end;
+}
+
+/* section*/
+.sectionFive {
+  background-color: #1f2845;
+  padding: 5%;
+}
+.sectionFive h2 {
+  font-size: 44px;
+  color: #fff;
+  text-align: center;
+  margin: auto;
+}
+.priceList {
+  display: flex;
+}
+.tier {
+  text-align: center;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 8% 0%;
+  margin: 1% 2%;
+  flex: 1 1 auto;
 }

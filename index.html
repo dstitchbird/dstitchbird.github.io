@@ -4,10 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      href="https://fonts.googleapis.com/css?family=Poppins"
-      rel="stylesheet"
-    />
-    <link
       href="https://fonts.googleapis.com/css?family=Monoton"
       rel="stylesheet"
     />
@@ -142,13 +138,15 @@
             </div>
 
             <div class="works" id="workGroup">
-              <div>tete</div>
-              <div>tete</div>
-              <div>tete</div>
-              <div>tete</div>
-              <div>tete</div>
-              <div>tete</div>
-              <div>tete</div>
+              <div class="work"><h4>Branding</h4></div>
+              <div class="work"><h4>Branding</h4></div>
+              <div class="work"><h4>Branding</h4></div>
+              <div class="work"><h4>Branding</h4></div>
+              <div class="work"><h4>Branding</h4></div>
+              <div class="work"><h4>Branding</h4></div>
+              <div class="work"><h4>Branding</h4></div>
+              <div class="work"><h4>Branding</h4></div>
+              <div class="work"><h4>Branding</h4></div>
             </div>
           </div>
         </section>
@@ -157,80 +155,133 @@
         <section class="sectionThree">
           <div class="awards">
             <div class="awardDisp">
-              <img src="#" alt="award" id="awardPlaceholder" />
+              <img
+                src="/res/img/workgridbg1.jpg"
+                alt="award"
+                id="awardPlaceholder"
+              />
               <span>
-                <label for=""> view </label>
+                <p>view</p>
                 <h3>Project title here</h3>
               </span>
             </div>
-            <div class="awardText">
+            <div class="awardDiv">
               <header><h2>Awards & honor</h2></header>
-              <ul>
-                <li>2011</li>
-                <li>2012</li>
-                <li>2013</li>
-              </ul>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius,
-                porro excepturi officiis tempora possimus cum adipisci natus
-                quisquam ipsum corporis esse ducimus similique nesciunt,
-                provident repellat? Corrupti a neque dignissimos.
-              </p>
+              <div class="tab">
+                <button
+                  class="tablinks"
+                  onclick="handleClick(event, '2011')"
+                  id="default"
+                >
+                  2011
+                </button>
+                <button class="tablinks" onclick="handleClick(event, '2012')">
+                  2012
+                </button>
+                <button class="tablinks" onclick="handleClick(event, '2015')">
+                  2015
+                </button>
+              </div>
+              <div id="2011" class="tabcontent">
+                <p>
+                  2011 ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+                  ullam delectus. Nihil, odio est ut eos molestias blanditiis
+                  iure veniam tempora incidunt rem dolores laborum, laboriosam
+                  nesciunt officiis adipisci at?
+                </p>
+              </div>
+
+              <div id="2012" class="tabcontent">
+                <p>
+                  2012 ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+                  ullam delectus. Nihil, odio est ut eos molestias blanditiis
+                  iure veniam tempora incidunt rem dolores laborum, laboriosam
+                  nesciunt officiis adipisci at?
+                </p>
+              </div>
+
+              <div id="2015" class="tabcontent">
+                <p>
+                  2015 ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+                  ullam delectus. Nihil, odio est ut eos molestias blanditiis
+                  iure veniam tempora incidunt rem dolores laborum, laboriosam
+                  nesciunt officiis adipisci at?
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
-        <!-- section Five -->
-        <section class="sectionFive">
+        <!-- section four -->
+        <section class="sectionFour">
           <header><h2>Our Studio Blog</h2></header>
           <div class="blog">
             <div class="blogOne">
-              <div class="blogImg"></div>
+              <div class="blogImg">
+                <img
+                  src="res/img/workgridbg1.jpg"
+                  height="100%"
+                  width="100%"
+                  alt=""
+                  srcset=""
+                />
+              </div>
               <div class="blogInfo">
-                <p>date</p>
-                <h3>spigg</h3>
+                <span>date</span>
+                <div class="head">
+                  <img src="" alt="play" />
+                  <h3>Lorem, ipsum dolor sit amet consectetur elit.</h3>
+                </div>
                 <p>
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum,
                   excepturi mollitia recusandae odio maiores nesciunt id
                   accusamus deserunt quasi in vero et! Hic temporibus vero
                   eveniet illum cupiditate ipsam inventore!
                 </p>
-                <span
-                  ><a href="http://" target="_blank" rel="noopener noreferrer">
-                    learn more
-                  </a></span
-                >
+                <button><a href="">Learn more</a></button>
               </div>
             </div>
 
             <div class="blogTwo">
-              <div class="blogImg"></div>
+              <div class="blogImg">
+                <img
+                  src="res/img/workgridbg1.jpg"
+                  height="100%"
+                  width="100%"
+                  alt=""
+                  srcset=""
+                />
+              </div>
               <div class="blogInfo">
-                <p>date</p>
-                <h3>spigg</h3>
+                <span>date</span>
+                <div class="head">
+                  <img src="" alt="play" />
+                  <h3>Lorem, ipsum dolor sit amet consectetur elit.</h3>
+                </div>
                 <p>
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum,
                   excepturi mollitia recusandae odio maiores nesciunt id
                   accusamus deserunt quasi in vero et! Hic temporibus vero
                   eveniet illum cupiditate ipsam inventore!
                 </p>
-                <span
-                  ><a href="http://" target="_blank" rel="noopener noreferrer">
-                    learn more
-                  </a></span
-                >
+                <button><a href="">Learn more</a></button>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- section Six -->
-        <section class="sectionSix">
+        <!--  section Five -->
+        <section class="sectionFive">
           <header><h2>Our price list</h2></header>
 
           <div class="priceList">
-            <div class="tier">
-              <img src="" alt="" />
+            <div class="tier tier-one">
+              <img
+                src="res/img/grid.svg"
+                width="50px"
+                height="50px"
+                alt="tier list"
+              />
               <h3>starter</h3>
               <p>desc</p>
               <h3>$39</h3>
@@ -240,11 +291,45 @@
                 <li>5GB</li>
                 <li>5GB</li>
               </ul>
-              <span
-                ><a href="http://" target="_blank" rel="noopener noreferrer">
-                  Buy Now</a
-                ></span
-              >
+              <button>but now</button>
+            </div>
+
+            <div class="tier tier-two">
+              <img
+                src="res/img/grid.svg"
+                width="50px"
+                height="50px"
+                alt="tier list"
+              />
+              <h3>starter</h3>
+              <p>desc</p>
+              <h3>$39</h3>
+              <ul>
+                <li>5GB</li>
+                <li>5GB</li>
+                <li>5GB</li>
+                <li>5GB</li>
+              </ul>
+              <button>but now</button>
+            </div>
+
+            <div class="tier tier-three">
+              <img
+                src="res/img/grid.svg"
+                width="50px"
+                height="50px"
+                alt="tier list"
+              />
+              <h3>starter</h3>
+              <p>desc</p>
+              <h3>$39</h3>
+              <ul>
+                <li>5GB</li>
+                <li>5GB</li>
+                <li>5GB</li>
+                <li>5GB</li>
+              </ul>
+              <button>but now</button>
             </div>
           </div>
         </section>
