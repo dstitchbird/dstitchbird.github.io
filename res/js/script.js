@@ -13,12 +13,13 @@ document.getElementById("default").click();
 
 function populateTestCard() {
   var slides = document.getElementsByClassName("slide");
-
+  
   for (i = 0; i < slides.length; i++) {
+    
     slides[i].innerHTML = `<div class="slideInner">
     <img
-      src="res/img/grid.svg"
-      height="auto"
+      src="res/img/workgridbg1.jpg"
+      height="100px"
       width="100px"
       alt=""
     />
