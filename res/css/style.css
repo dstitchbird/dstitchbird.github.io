@@ -568,7 +568,7 @@ a {
   width: auto;
   height: 70vh;
   padding: 2% 5%;
-  margin: 2% 0% 5% 0%;
+  margin: 2% 0% 10% 0%;
   overflow: hidden;
   text-align: center;
 }
@@ -616,8 +616,14 @@ a {
 .slides > div {
   scroll-snap-align: start;
 }
+.slide-wrap {
+  position: relative;
+}
 .slide-Dots {
-  margin-top: -5%;
+  position: absolute;
+  width: 20vw;
+  bottom: 0px;
+  left: 36%;
 }
 
 /*<!-- call to action -->*/
